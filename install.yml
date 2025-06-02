@@ -1,0 +1,10 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: installing random apps
+    apt:
+      name: mosh
+      state: latest
