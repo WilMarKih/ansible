@@ -1,0 +1,17 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: Updating our index
+    apt:
+      update_cache: true
+      state: latest
+    when: ansible_distribution = "debian"
+
+  - name: installing mosh
+    apt:
+      name: mosh
+      state: latest
+    when: ansible_distribution = "debian"

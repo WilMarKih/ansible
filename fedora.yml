@@ -1,0 +1,12 @@
+---
+- name: Install cockpit using shell module
+  hosts: fedora
+  become: true
+
+  tasks:
+
+    - name: Install cockpit
+      shell:
+        - dnf install -y cockpit
+        - dnf install -y zip,unzip
+
