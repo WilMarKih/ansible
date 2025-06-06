@@ -1,22 +1,28 @@
 ---
 
-- hosts: all
+- hosts: ubuntu
   become: true
   tasks:
 
   - name: installing random shit
     tags: qemu-guest-agent, hollywood, apache2, zip, unzip, cockpit
-    package:
-      update_cache: yes
+#    package:
+#      update_cache: yes
 #      update_only: yes
-      clean: yes
-      autoremove: yes
-      purge: true
-      name:
-        - "{{qemu}}"
-        - "{{holly}}"
-        - apache2
-        - zip
-        - unzip
-        - cockpit
-      state: latest
+#      clean: yes
+#      autoremove: yes
+#      purge: true
+#      name:
+#        - "{{qemu}}"
+#        - "{{holly}}"
+#        - apache2
+#        - zip
+#        - unzip
+#        - cockpit
+#      state: latest
+      copy:
+        src: yes.html
+        dest: /var/www/html/index.html
+        owner: root
+        group: root
+        mode: 0644
