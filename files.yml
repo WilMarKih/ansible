@@ -5,5 +5,9 @@
   tasks:
 
   - name: "copying files"
-    package:
-      update_cache: true
+    copy:
+      src: /home/wil/ansible/files/site.html
+      dest: /var/www/html/index.html
+      owner: root
+      group: root
+      mode: 0644

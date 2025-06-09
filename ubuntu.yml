@@ -13,12 +13,7 @@
 #      autoremove: yes
 #      purge: true
       name:
-        - qemu
-        - holly
         - apache2
-        - zip
-        - unzip
-        - cockpit
       state: latest
 #      copy:
 #        src: yes.html
