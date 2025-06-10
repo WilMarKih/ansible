@@ -1,0 +1,13 @@
+---
+
+- hosts: ubuntu
+  become: yes
+  tasks:
+    - name: "i wonder if i can zip"
+      archive:
+        src: /home/wil
+        dest: /home/wil.zip
+        format: zip
+        owner: root
+        group: root
+        mode: '0644'

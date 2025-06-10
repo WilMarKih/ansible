@@ -1,0 +1,10 @@
+---
+
+- hosts: ubuntu
+  become: yes
+  tasks:
+
+  - name: "creating users"
+    user:
+      name: user1
+      group: root
