@@ -17,6 +17,8 @@
         - zsh
         - fzf
         - git
+        - zip
+        - unzip
       state: latest
 #      copy:
 #        src: yes.html

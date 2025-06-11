@@ -1,0 +1,11 @@
+---
+
+- hosts: ubuntu
+  become: yes
+  tasks:
+
+  - name: "delete unwanted packages"
+    package:
+      name:
+        - cockpit
+      state: absent
