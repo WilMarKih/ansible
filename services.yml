@@ -1,0 +1,16 @@
+---
+
+- hosts: ubuntu
+  become: yes
+  tasks:
+
+  - name: Installing qemu
+    apt:
+      name: qemu-guest-agent
+      state: latest
+
+#  - name: Enabling and starting services
+#    systemd:
+#      name: qemu-guest-agent
+#      enabled: true
+#      state: started

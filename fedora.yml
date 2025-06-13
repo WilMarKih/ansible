@@ -1,12 +1,11 @@
----
-- name: Install cockpit using shell module
+- name: Install Cockpit via shell
   hosts: fedora
   become: true
 
   tasks:
-
-    - name: Install cockpit
-      shell:
-        - dnf install -y cockpit
-        - dnf install -y zip,unzip
-
+    - name: Update system and remove cockpit
+      shell: |
+        dnf update -y
+        dnf remove -y cockpit
+      args:
+        executable: /bin/bash
