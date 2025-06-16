@@ -1,9 +1,9 @@
-- name: Install Cockpit via shell
+- name: Updating Fedora instance
   hosts: fedora
   become: true
 
   tasks:
-    - name: Update system and remove cockpit
+    - name: Update system
       shell: |
         dnf update -y
       args:
