@@ -6,6 +6,5 @@
     - name: Update system and remove cockpit
       shell: |
         dnf update -y
-        dnf remove -y cockpit
       args:
         executable: /bin/bash
