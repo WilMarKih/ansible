@@ -5,7 +5,7 @@
   tasks:
 
   - name: installing random shit
-#    tags: qemu-guest-agent, hollywood, apache2, zip, unzip, cockpit
+    tags: apache2,zsh,fzf,git,zip,unzip,mosh
     package:
       name:
         - apache2
@@ -14,4 +14,5 @@
         - git
         - zip
         - unzip
+        - mosh
       state: latest

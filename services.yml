@@ -4,13 +4,8 @@
   become: yes
   tasks:
 
-  - name: Installing qemu
-    apt:
-      name: qemu-guest-agent
-      state: latest
-
-#  - name: Enabling and starting services
-#    systemd:
-#      name: qemu-guest-agent
-#      enabled: true
-#      state: started
+  - name: Enabling and starting services
+    tags: apache2
+    service:
+      name: apache2
+      state: started
